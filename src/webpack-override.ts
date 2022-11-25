@@ -1,4 +1,4 @@
-import {WebpackOverrideFn} from 'remotion';
+import {WebpackOverrideFn} from 'remotion'
 
 export const webpackOverride: WebpackOverrideFn = (currentConfiguration) => {
 	return {
@@ -11,12 +11,12 @@ export const webpackOverride: WebpackOverrideFn = (currentConfiguration) => {
 					: []
 				).filter((rule) => {
 					if (rule === '...') {
-						return false;
+						return false
 					}
 					if (rule.test?.toString().includes('.css')) {
-						return false;
+						return false
 					}
-					return true;
+					return true
 				}),
 				{
 					test: /\.css$/i,
@@ -39,5 +39,5 @@ export const webpackOverride: WebpackOverrideFn = (currentConfiguration) => {
 				},
 			],
 		},
-	};
-};
+	}
+}
